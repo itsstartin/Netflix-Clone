@@ -4,16 +4,35 @@ import axios from '../../axios'
 import {   API_KEY, imageURL } from '../../constants/constants'
 import YouTube from 'react-youtube'
 function RowPost(props) {
+  const [genres,setGenres]=useState([])
+  const [activeGenre,setActiveGenre]=useState({})
   const [row,setRow]=useState([])
   const [urlId,setUrlId]=useState('')
+    useEffect(()=>{
+    axios.get(`/genre/movie/list?api_key=${API_KEY}`).then((response)=>{
+      console.log(response.data.genres)
+      setGenres(response.data.genres)
+      setActiveGenre(response.data.genres[0])
+    })
+  },[])
   useEffect(()=>{
-    axios.get(props.url).then((response)=>{
+    axios.get(
+      props.isSmall ?
+        // `${props.url}${activeGenre.id}`
+        props.url+activeGenre.id
+      :
+        props.url
+      
+    ).then((response)=>{
+    console.log(activeGenre.name)
     console.log(response.data.results)
     setRow(response.data.results)
   }).catch(err=>{
       console.log("uncaught error")
   })
-  },[])
+  },[activeGenre])
+
+  
   const opts = {
       height: '390',
       width: '100%',
@@ -35,7 +54,28 @@ function RowPost(props) {
   }
   return (
     <div className='row'>
-        <h2>{props.title}</h2>
+      <div className='genre-header'>
+         {
+          props.isSmall ? 
+          genres.map((e)=>{
+            if(activeGenre.name !== e.name){
+              return <h2 
+              className='title'
+              onClick={()=>{
+                setActiveGenre(e)
+                console.log(activeGenre.id)
+              }}
+              >{e.name}</h2>
+            }
+            else{
+              return <h2 className='activeTitle'>{e.name}</h2>
+            }
+          })
+          
+          : <h2>{props.title}</h2>
+          
+          }
+      </div>
         <div className="posters">
           {row.map((obj)=>{
             console.log(imageURL+obj.backdrop_path);

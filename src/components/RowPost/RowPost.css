@@ -2,6 +2,31 @@
     margin-left:20px;
     color: #fff;
 }
+.genre-header{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.genre-header::-webkit-scrollbar{
+    display: none;
+}
+.activeTitle{
+    white-space: nowrap;
+    font-size: 34px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.title{
+    color: gray;
+    white-space: nowrap;
+    font-size: 18px;
+    padding-left: 15px;
+    /* transform: scale(0.6); */
+}
+.title:hover{
+    transform: scale(1.2);
+}
 .posters{
     display: flex;
     padding: 20px;

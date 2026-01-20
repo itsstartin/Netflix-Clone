@@ -18,6 +18,8 @@ action ='https://api.themoviedb.org/3/discover/movie?api_key={API_KEY_HERE}&with
 
 to get youtube trailer = https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key={API_KEY_HERE}
 
+to get genre list = https://api.themoviedb.org/3/genre/movie/list?api_key={API_KEY_HERE}
+
 originals ='https://api.themoviedb.org/3/discover/tv?api_key={API_KEY_HERE}&with_networks=213' 
 
 ComedyMovies: 'https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY_HERE}&with_genres=35',
