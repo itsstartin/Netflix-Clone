@@ -16,6 +16,8 @@ trending ='https://api.themoviedb.org/3/trending/all/week?api_key={API_KEY_HERE}
 
 action ='https://api.themoviedb.org/3/discover/movie?api_key={API_KEY_HERE}&with_genres=28'
 
+to get youtube trailer = https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key={API_KEY_HERE}
+
 originals ='https://api.themoviedb.org/3/discover/tv?api_key={API_KEY_HERE}&with_networks=213' 
 
 ComedyMovies: 'https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY_HERE}&with_genres=35',
