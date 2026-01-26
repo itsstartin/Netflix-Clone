@@ -7,7 +7,9 @@ function Banner() {
   useEffect(()=>{
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((responce)=>{
       // console.log(responce.data.results[0])
-      setBanner(responce.data.results[0])
+      let n = responce.data.results.length;
+      n = Math.floor(Math.random() * n); // Generate random number between 0 to n-1
+      setBanner(responce.data.results[n])
 
     })
   },[])

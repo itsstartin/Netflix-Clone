@@ -16,6 +16,9 @@ function RowPost(props) {
     })
   },[])
   useEffect(()=>{
+    // Guard: Only run if activeGenre has an id (prevents running before first useEffect completes)
+    if (!activeGenre.id) return;
+    
     axios.get(
       props.isSmall ?
         // `${props.url}${activeGenre.id}`
