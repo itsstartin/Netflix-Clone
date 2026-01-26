@@ -1,9 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState , useRef } from 'react'
 import './RowPost.css'
 import axios from '../../axios'
 import {   API_KEY, imageURL } from '../../constants/constants'
 import YouTube from 'react-youtube'
 function RowPost(props) {
+  const rowRef = useRef(null)
+  const handleMouseMove = (e) => {
+    if (!rowRef.current) return;
+    const {left, width} = rowRef.current.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const percent = mouseX / width;
+    if(percent > 0.7){
+        rowRef.current.scrollLeft += percent * 20;
+    }
+    else if(percent < 0.3){
+      rowRef.current.scrollLeft -= (1 - percent) * 20;
+    }
+  }
   const [genres,setGenres]=useState([])
   const [activeGenre,setActiveGenre]=useState({})
   const [row,setRow]=useState([])
@@ -79,7 +92,10 @@ function RowPost(props) {
           
           }
       </div>
-        <div className="posters">
+        <div className="posters"
+        onMouseMove={handleMouseMove}
+        ref={rowRef}
+        >
           {row.map((obj)=>{
             console.log(imageURL+obj.backdrop_path);
             return <img onClick={()=>handleMovie(obj.id)}
