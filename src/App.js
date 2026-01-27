@@ -3,7 +3,6 @@ import './App.css'
 import Banner from "./components/Banner/Banner";
 import RowPost from "./components/RowPost/RowPost";
 import { genreUrl, originals } from "./urls";
-
 function App() {
   return (
     <div>

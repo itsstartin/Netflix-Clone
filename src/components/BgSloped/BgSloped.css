@@ -1,0 +1,28 @@
+.bg-sloped{
+    overflow-y: hidden;
+    position: relative;
+    width:100%;
+    perspective: 2000px;
+    
+}
+.posters-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250%);
+    transform: rotateX(15deg)
+                rotateY(-10deg)
+                rotateZ(13deg)
+                translateX(-700px)
+                translateY(-500px)
+                ;
+}
+.poster-item{
+    height: 100%;
+    width: 100%;
+    
+    
+}
+.poster-item img{
+    height: 340px;
+    width:230px;
+    padding: 6px;
+}
