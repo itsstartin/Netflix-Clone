@@ -1,7 +1,5 @@
 # Getting Started with Create React App
 
-A Netflix-inspired frontend application built with React. Initially developed by following a Brototype React tutorial series, and extended with custom sections and features of my own. This ongoing project helps me practice real-world React concepts, UI design, and frontend best practices.
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
