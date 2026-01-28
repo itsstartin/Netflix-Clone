@@ -27,17 +27,18 @@ function RowPost(props) {
       setGenres(response.data.genres)
       setActiveGenre(response.data.genres[0])
     })
-  },[props.isSmall, props.url])
+  },[])
+  const fetchUrl = props.isSmall && activeGenre?.id ?
+  // `${props.url}${activeGenre.id}`
+  props.url+activeGenre.id
+:
+  props.url;
   useEffect(()=>{
     // Guard: Only run if activeGenre has an id (prevents running before first useEffect completes)
     if (!activeGenre.id) return;
     
     axios.get(
-      props.isSmall ?
-        // `${props.url}${activeGenre.id}`
-        props.url+activeGenre.id
-      :
-        props.url
+      fetchUrl
       
     ).then((response)=>{
     console.log(activeGenre.name)
@@ -46,7 +47,7 @@ function RowPost(props) {
   }).catch(err=>{
       console.log("uncaught error")
   })
-  },[activeGenre])
+  },[activeGenre, fetchUrl])
 
   
   const opts = {
