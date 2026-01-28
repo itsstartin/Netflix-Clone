@@ -27,7 +27,7 @@ function RowPost(props) {
       setGenres(response.data.genres)
       setActiveGenre(response.data.genres[0])
     })
-  },[])
+  },[props.isSmall, props.url])
   useEffect(()=>{
     // Guard: Only run if activeGenre has an id (prevents running before first useEffect completes)
     if (!activeGenre.id) return;
