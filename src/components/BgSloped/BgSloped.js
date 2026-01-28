@@ -16,6 +16,7 @@ function BgSloped(props) {
   )
 
   return (
+    <div >
     <div className="bg-sloped">
         <div className="posters-grid">
             <div className="poster-item">
@@ -29,6 +30,7 @@ function BgSloped(props) {
                 }
             </div>
         </div>
+    </div>
     </div>
   )
 }

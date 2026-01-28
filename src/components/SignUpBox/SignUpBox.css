@@ -1,0 +1,78 @@
+
+.outerBox{
+    
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    color: white;
+}
+.signUpBox{
+    position: absolute;
+    top:10%;
+    width: 490px;
+    height:580px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 70px;
+    padding-top: 50px;
+    border-radius: 5px;
+    
+}
+.title-signUp{
+    font-weight: 1000;
+    padding-bottom: 10px;
+}
+.inputField{
+    margin-top: 20px;
+    background-color: rgba(34, 32, 32, 0.6);
+    padding-left: 16px;
+    height: 60px;
+    display: block;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+
+.inputField::placeholder {
+    font-size: 16px;
+    color: rgb(213, 213, 213);
+}
+.signUpButton{
+    display: block;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(218, 0, 0);
+    color:white;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    transition-duration: 500ms;
+}
+.signUpButton:hover{
+    background-color: rgb(174, 0, 0);
+}
+.guestLoginButton{
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(96, 96, 96, 0.566);
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    transition-duration: 500ms;
+}
+.guestLoginButton:hover{
+    
+    background-color: rgba(66, 66, 66, 0.566);
+}

@@ -1,5 +1,5 @@
 .row{
-    margin-left:20px;
+    position: relative;
     color: #fff;
 }
 .genre-header{
@@ -17,14 +17,14 @@
     padding-left: 15px;
     padding-bottom: 10px;
 }
-.title{
+.title-genre{
     color: gray;
     white-space: nowrap;
     font-size: 18px;
     padding-left: 15px;
     /* transform: scale(0.6); */
 }
-.title:hover{
+.title-genre:hover{
     transform: scale(1.2);
 }
 .posters{

@@ -1,8 +1,10 @@
 .bg-sloped{
     overflow-y: hidden;
-    position: relative;
+    position: absolute;
+    height: 1000px;
     width:100%;
     perspective: 2000px;
+    opacity: 0.42;
     
 }
 .posters-grid{
@@ -25,4 +27,5 @@
     height: 340px;
     width:230px;
     padding: 6px;
+    border-radius: 16px;
 }

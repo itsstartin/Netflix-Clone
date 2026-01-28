@@ -3,10 +3,11 @@
     position: fixed;
     display:flex;
     padding: 20px;
-    height: 30px;
+    height: 60px;
     width:100%;
     justify-content: space-between;
-    background-color: #111;
+    background-color: transparent;
+    z-index: 20;
 }
 .logo{
 position: fixed;

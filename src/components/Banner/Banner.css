@@ -5,21 +5,22 @@ background-size: cover;
 color:white;
 }
 .content{
-    padding-top: 140px;
+    padding-top: 110px;
     height:190px;
     padding-left: 15px;
 }
 .title{
+    text-shadow:2px 2px 6px #1111116c ;
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
 
 }
-
 .button{
     color: white;
     outline:none;
     border:none;
+    width: 80px;
     font-weight: 700;
     border-radius:5px;
     padding-left: 2 rem;
@@ -29,6 +30,7 @@ color:white;
     background-color: rgba(51, 51, 51, 0.5);
     cursor: pointer;
     margin-right: 1rem;
+    transition-duration: 400ms;
 
 }
 .button:hover{
@@ -36,14 +38,28 @@ color:white;
     background-color: #e6e6e6;
 }
 .description{
-    width: 45rem;
+    text-shadow:2px 2px 6px #1111116c ;
+    width: 65rem;
     line-height: 1.3;
     padding-top: 1rem;
     font-size: 1rem;
     height: 80px;
-    max-width: 360px; 
+    max-width: 480px; 
 }
 .fade_bottom{
-    height:7.4rem;
+    height:16.1rem;
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111);
+}
+.youtubeClose{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 9px;
+    top: 65px;
+    right: 16px;
+}
+.youtubeClose:hover{
+    background-color: rgba(33, 0, 0, 0.865);
 }

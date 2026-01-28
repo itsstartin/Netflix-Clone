@@ -39,7 +39,7 @@ function RowPost(props) {
     
     axios.get(
       fetchUrl
-      
+    
     ).then((response)=>{
     console.log(activeGenre.name)
     console.log(response.data.results)
@@ -71,13 +71,13 @@ function RowPost(props) {
   }
   return (
     <div className='row'>
-      <div className='genre-header'>
+      <div className='genre-header' >
          {
           props.isSmall ? 
           genres.map((e)=>{
             if(activeGenre.name !== e.name){
               return <h2 
-              className='title'
+              className='title-genre'
               onClick={()=>{
                 setActiveGenre(e)
                 console.log(activeGenre.id)
@@ -89,7 +89,7 @@ function RowPost(props) {
             }
           })
           
-          : <h2>{props.title}</h2>
+          : <h2 className='activeTitle'>{props.title}</h2>
           
           }
       </div>
